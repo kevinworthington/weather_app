@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+ <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css"/>
+<!-- As there are many points, we will use the Leaflet MarkerCluster plugin to group them.   -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css"/>
+<script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <header>
+    <h1></h1>
+    <p></p>
+</header>
+
+<main class="layout">
+    <section id="map-container">
+    <h2></h2>
+    <div id="map"></div>
+    </section>
+
+    <section id="chart-container">
+
+        <div class="tabs">
+            <button class="tab-button active" data-tab="forcast_table">
+                Table
+            </button>
+            <button class="tab-button" data-tab="forcast_chart">
+                Chart
+            </button>
+            </div>
+
+            <div class="tab-content">
+            <div id="forcast_table" class="tab-panel active">
+                <table id="forecast">
+                    <thead>
+                        <tr>
+                        <th>Period</th>
+                        <th>Temperature</th>
+                        <th>Forecast</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                    </table>
+            </div>
+            <div id="forcast_chart" class="tab-panel">
+                <canvas id="chart"></canvas>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>
