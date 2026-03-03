@@ -1,5 +1,5 @@
 // A simple variable
-let projectTitle = "Weather Data Explorer...";
+let projectTitle = "Weather Data Explorer..";
 
 // Logging output
 console.log(projectTitle);
